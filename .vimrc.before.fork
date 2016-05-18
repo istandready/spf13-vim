@@ -1,1 +1,50 @@
 let g:spf13_bundle_groups=['general', 'programming', 'youcompleteme']
+
+"Prevent automatically changing to open file directory
+let g:spf13_no_autochdir = 1
+
+" Leader keys
+let g:spf13_leader='\'
+
+filetype on
+filetype plugin on
+filetype indent on
+
+set smartindent
+set cindent
+set tabstop=4  
+set shiftwidth=4  
+set mouse=v
+set noexpandtab
+set ignorecase
+set ruler
+set hlsearch
+set ruler
+set hlsearch
+set nu
+set autoread
+set showmatch
+set nocp
+set cscopequickfix=s-,c-,d-,i-,t-,e-
+set csto=0
+set cst
+
+map <C-F12> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR>
+
+color molokai
+syntax enable
+syntax on
+
+nmap <C-\>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <C-\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <C-\>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+nmap <C-\>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+nmap <C-n> :cnext<CR>
+nmap <C-p> :cprev<CR> 
+nmap <C-t> :colder<CR>:cc<CR>
+
+
